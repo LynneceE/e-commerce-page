@@ -50,7 +50,7 @@ router.get('/:id', (req, res) => {
     }]
  }).then(dbCategoryData => {
    if (!dbCategoryData) { // if the client searches an id that doesn't exist an error message returns
-     res.status(404).json({ message: 'No category was found with this id '});
+     res.status(404).json({ message: 'No category with this id was found!'});
      return;
    }
    res.json(dbCategoryData);
@@ -84,7 +84,7 @@ router.put('/:id', (req, res) => {
   })
   .then(dbCategoryData => {
     if (dbCategoryData) {
-      res.status(404).json({ message: 'No category was found with this id' });
+      res.status(404).json({ message: 'No category with this id was found!' });
       return;
     }
     res.json(dbCategoryData);
@@ -104,7 +104,7 @@ router.delete('/:id', (req, res) => {
   })
   .then(dbCategoryData => {
     if (!dbCategoryData) {
-      res.status(404).json({ message: 'No category was found with this id'});
+      res.status(404).json({ message: 'No category with this id was found!'});
       return;
     }
   })
