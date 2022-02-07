@@ -9,6 +9,11 @@ Create a .env file to the root of the app to access the database
 
 Then npm run seed to fill the schema
 <img src="images/npm-gif.gif">
+
+
+
+
+
 then npm start to reach localhost
 
 # Usage
@@ -21,8 +26,17 @@ https://www.youtube.com/watch?v=pjeNHnSWKyo
 
 # Technologies Used
 NodeJs
+
+
+
 ExpressJs
+
+
+
 MySQL2
+
+
+
 Sequelize
 
 
