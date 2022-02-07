@@ -22,18 +22,21 @@ Product.belongsTo(Category, {
 // foreign key connection referenced in Product.js?
 Category.hasMany(Product, {
   foreignKey: 'category_id'
+
 });
 
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
   through: ProductTag, // because ProductTag.js contains product_id foreignkey reference
-  foreignKey: 'product_id'
+  foreignKey: 'product_id',
+  
 });
 
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   through: ProductTag, // because ProductTag.js contains tag_id foreignkey reference
-  foreignKey: 'tag_id'
+  foreignKey: 'tag_id',
+  
 });
 
 module.exports = {

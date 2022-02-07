@@ -54,9 +54,10 @@ Product.init(
     // category id column
     // category_id INT 
     category_id: {
-      types: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       // reference category id from Category.js
       //FOREIGN KEY (category_id) REFERENCES category(category_id)
+
       references: {
         model: "category",
         key: "id"
